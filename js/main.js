@@ -30,24 +30,24 @@ $(document).ready(function() {
 		function() { $(this).stop(true,true).fadeTo(250, 0.618); }
 	);
 
-});
+	$(window).load(function() {
 
-$(window).load(function() {
+		// make $name and $info same height
+		MaxHeight = Math.max( $name.height(), $info.height() );
+		$name.height( MaxHeight );
+		$info.height( MaxHeight );
 
-	// make $name and $info same height
-	MaxHeight = Math.max( $name.height(), $info.height() );
-	$name.height( MaxHeight );
-	$info.height( MaxHeight );
+		// show $master with a slide in when everything is loaded
+		$loader.fadeOut(2000);
+		$master.show().animate({top: ( $viewport.height() - $master.outerHeight(true) ) / 2 + "px"}, 3000);
 
-	// show $master with a slide in when everything is loaded
-	$loader.fadeOut(2000);
-	$master.show().animate({top: ( $viewport.height() - $master.outerHeight(true) ) / 2 + "px"}, 3000);
+	});
 
-});
+	// center align $master in $viewport on resize
+	$(window).resize(function() {
+		vCenter($master, $viewport);
+	});
 
-// center align $master in $viewport on resize
-$(window).resize(function() {
-	vCenter($master, $viewport);
 });
 
 function vCenter($object, $reference) {
