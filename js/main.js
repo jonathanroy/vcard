@@ -21,29 +21,28 @@ $(document).ready(function() {
 	// center align $loader in $viewport
 	vCenter($loader, $viewport);
 
-	// make $name and $info same height
-	MaxHeight = Math.max( $name.height(), $info.height() );
-	$name.height( MaxHeight );
-	$info.height( MaxHeight );
-
 	// hide $master (we will show it when everything is loaded)
 	$master.css("top", -2 * $master.outerHeight(true)).hide();
 
 	// fade in / fade out links on hover (including social media icons)
 	$("a").fadeTo(0, 0.618).hover(
-	function() { $(this).stop(true,true).fadeTo(250, 1.000); },
-	function() { $(this).stop(true,true).fadeTo(250, 0.618); }
+		function() { $(this).stop(true,true).fadeTo(250, 1.000); },
+		function() { $(this).stop(true,true).fadeTo(250, 0.618); }
 	);
-
-	// remove social icon text
-	$(".social a").html("");
 
 });
 
-// show $master with a slide in when everything is loaded
 $(window).load(function() {
+
+	// make $name and $info same height
+	MaxHeight = Math.max( $name.height(), $info.height() );
+	$name.height( MaxHeight );
+	$info.height( MaxHeight );
+
+	// show $master with a slide in when everything is loaded
 	$loader.fadeOut(2000);
 	$master.show().animate({top: ( $viewport.height() - $master.outerHeight(true) ) / 2 + "px"}, 3000);
+
 });
 
 // center align $master in $viewport on resize
