@@ -25,7 +25,7 @@ a, input, textarea { border: none; outline: none }
   font-family: "Varela";
   font-style: normal;
   font-weight: normal;
-  src: local("Varela"), url("Varela-Regular.woff") format("woff");
+  src: local("Varela"), url("/fonts/Varela-Regular.woff") format("woff");
 }
 
 body {
@@ -84,11 +84,11 @@ html, body {
 /* -- 4. DESIGN -- */
 
 body {
-  background: url(darth_stripe.png) repeat top left #222;
+  background: url(/images/darth_stripe.png) repeat top left #222;
 }
 
 #master {
-  background: url(bright_squares.png) repeat top left #eee;
+  background: url(/images/bright_squares.png) repeat top left #eee;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
