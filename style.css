@@ -1,0 +1,143 @@
+/* -- 1. RESET BROWSER DEFAULTS -- */
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, code, em, i, font,
+img, small, strike, strong,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+:focus { outline: 0; }
+a, input, textarea { border: none; outline: none }
+
+/* -- 2. TYPOGRAPHY -- */
+
+@font-face {
+  font-family: "Varela";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Varela"), url("Varela-Regular.woff") format("woff");
+}
+
+body {
+  font-family: Varela, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.618);
+}
+
+a {
+  color: rgba(0, 0, 0, 1.00);
+  text-decoration: none;
+}
+
+.vcard .fn { font-size: 55px; letter-spacing: -2px; color: rgba(0, 0, 0, 0.618); }
+
+.vcard .expertise, .vcard .role, .vcard .org { font-size: 14px; }
+
+/* -- 3. STRUCTURE -- */
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#master {
+  width: 702px;
+  position: relative;
+  margin: 0 auto;
+  padding: 25px 0;
+}
+
+#name, #info {
+  float: left;
+  padding: 25px;
+}
+
+#name {
+  width: 375px;
+  text-align: right;
+  border-right: 1px solid #ccc;
+}
+
+#info {
+  width: 225px;
+  border-left: 1px solid #fff;
+}
+
+.clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* -- 4. DESIGN -- */
+
+body {
+  background: url(darth_stripe.png) repeat top left #222;
+}
+
+#master {
+  background: url(bright_squares.png) repeat top left #eee;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#master:before, #master:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+#master:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.vcard .photo img { margin-bottom: 15px; border-color: #fff; border: 8px solid rgba(255,255,255,0.75); }
+.vcard .social { margin-top: 15px; }
+.vcard .social ul li { display: inline; margin-right: 5px; }
+.vcard .social ul li a { display: inline-block; }
+
+
+/* -- 5. LOADER -- */
+
+#loader {
+  width: 54px;
+  height: 55px;
+  position: relative;
+  margin: 0 auto;
+}
