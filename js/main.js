@@ -24,7 +24,7 @@ $(document).ready(function() {
 	
 	// center align $master in $viewport on window load and resize
 	$window.bind('load resize', function() {
-		vCenter($master, $viewport);
+		vCenter($master, $window);
 	});
 
 });
